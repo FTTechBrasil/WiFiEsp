@@ -62,8 +62,8 @@
 #define ESP8266_BAUD 115200
 
 // Hardware Serial on Mega, Leonardo, Micro...
-#define EspSerial Serial2
-#define serverport 80
+#define EspSerial SERIALCLICK     // the serial relative to the socket where your WiFi click is locates
+#define serverport PORT           // the port of the HTTP server
 
 ESP8266 wifi(&EspSerial);
 
@@ -91,8 +91,8 @@ void httpRequest(void);
 *******************************************************************************/
 
 // Define EN and RST pins
-#define EN 44
-#define RST A4
+#define EN  ENSOCKET
+#define RST RSTSOCKET
 
 void setup()
 {
